@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 模组黑名单
-      link: /BlockList
+      link: /BanList
     - theme: alt
       text: 已收集RPC列表
-      link: /api-examples
+      link: /RPCList
 
 features:
   - title: 模组黑名单 
