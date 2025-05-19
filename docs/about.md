@@ -2,6 +2,7 @@
 title: 关于
 editLink: false
 outline: false
+lastUpdated: false
 ---
 # 关于文档
 
@@ -18,6 +19,7 @@ outline: false
 我们真挚感谢您的帮助。
 
 感谢以下为仓库做出贡献的开发者们:
+
 <a href="https://github.com/QingFengTechnology/AmongUs-SusList/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=QingFengTechnology/AmongUs-SusList" />
 </a>

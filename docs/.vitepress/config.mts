@@ -43,8 +43,8 @@ export default defineConfig({
     lastUpdated: {
       text: '上次更新于',
       formatOptions: {
-        dateStyle: 'full',
-        timeStyle: 'medium'
+        dateStyle: 'medium',
+        timeStyle: 'short'
       }
     },
     search: {
