@@ -13,7 +13,8 @@ export default defineConfig({
     logo: '/AmongUs.png',
     siteTitle: 'SusList',
     nav: [
-      { text: '首页', link: '/' }
+      { text: '首页', link: '/' },
+      { text: '关于', link: '/about' }
     ],
 
     /*sidebar: [
@@ -25,7 +26,10 @@ export default defineConfig({
         ]
       }
     ],*/
-
+    outline: {
+      level: [2, 6],
+      label: '页面导航'
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/QingFengTechnology/AmongUs-SusList' }
     ],
@@ -36,11 +40,18 @@ export default defineConfig({
       pattern: 'https://github.com/QingFengTechnology/AmongUs-SusList/blob/main/docs/:path',
       text: '在GitHub上查看此页'
     },
+    lastUpdated: {
+      text: '上次更新于',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
     search: {
       provider: 'local',
       options: {
         locales: {
-          zh: {
+          root: {
             translations: {
               button: {
                 buttonText: '搜索文档',
@@ -70,5 +81,10 @@ export default defineConfig({
     returnToTopLabel: '返回顶部',
     langMenuLabel: '语言',
     externalLinkIcon: true,
+  },
+  markdown: {
+    image: {
+      lazyLoading: true
+    }
   }
 })
