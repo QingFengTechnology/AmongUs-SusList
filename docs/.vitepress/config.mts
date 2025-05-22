@@ -5,6 +5,13 @@ import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 
 export default defineConfig({
+  vite: { 
+    ssr: { 
+      noExternal: [ 
+        '@nolebase/vitepress-plugin-highlight-targeted-heading', 
+      ], 
+    }, 
+  }, 
   vue: {
     template: {
       transformAssetUrls: {
