@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 
 export default defineConfig({
   title: "AmongUs SusList",
@@ -34,7 +35,8 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/QingFengTechnology/AmongUs-SusList' }
     ],
     footer: {
-      copyright: '© 2023-2025 By QingFeng'
+      message: "使用<a href='https://github.com/QingFengTechnology/AmongUs-SusList/blob/main/LICENSE' target='_blank'>AGPL-3.0</a>协议开源<br>由GitHub Pages提供在线服务",
+      copyright: "© 2023-2025 By <a href='https://qingfengawa.top' target='_blank'>QingFeng</a>"
     },
     editLink: {
       pattern: 'https://github.com/QingFengTechnology/AmongUs-SusList/blob/main/docs/:path',
@@ -85,6 +87,11 @@ export default defineConfig({
   markdown: {
     image: {
       lazyLoading: true
-    }
+    },
+    /* 这是Markdown双向链接配置。
+    语法请见: https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/markdown-it-bi-directional-links/syntax */
+    config: (md) => {
+      md.use(BiDirectionalLinks()) 
+    },
   }
 })

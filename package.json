@@ -5,6 +5,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "@nolebase/markdown-it-bi-directional-links": "^2.17.0",
     "vitepress": "^1.6.3"
   }
 }
