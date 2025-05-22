@@ -3,6 +3,10 @@ import { defineConfig } from 'vitepress'
 // 导入了多个插件,请自行查找相关内容。
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
 import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
+import { 
+  GitChangelog, 
+  GitChangelogMarkdownSection, 
+} from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 export default defineConfig({
   vite: { 
@@ -10,7 +14,13 @@ export default defineConfig({
       noExternal: [ 
         '@nolebase/vitepress-plugin-highlight-targeted-heading', 
       ], 
-    }, 
+    },
+    plugins: [ 
+      GitChangelog({ 
+        repoURL: () => 'https://github.com/QingFengTechnology/AmongUs-SusList', 
+      }), 
+      GitChangelogMarkdownSection(), 
+    ],
   }, 
   vue: {
     template: {
@@ -23,10 +33,10 @@ export default defineConfig({
   titleTemplate: ":title - SusList",
   description: "一个集合了各大模组反作弊信息的网站,包含黑名单列表、各模组及作弊RPC信息等。",
   head: [['link', { rel: 'icon',type: 'image/png', href: '/AmongUs.png' }]],
-  lang: 'zh-cn',
+  lang: 'zh-CN',
   base: '/',
   cleanUrls: true,
-  lastUpdated: true,
+  lastUpdated: false,
   themeConfig: {
     logo: '/AmongUs.png',
     siteTitle: 'SusList',
