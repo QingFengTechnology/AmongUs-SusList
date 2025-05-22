@@ -1,7 +1,17 @@
 import { defineConfig } from 'vitepress'
+// 社区插件安装教程、相关语法: https://nolebase-integrations.ayaka.io/pages/zh-CN/guide/getting-
+// 导入了多个插件,请自行查找相关内容。
 import { BiDirectionalLinks } from '@nolebase/markdown-it-bi-directional-links'
+import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 
 export default defineConfig({
+  vue: {
+    template: {
+      transformAssetUrls: {
+        NolebaseUnlazyImg: ['src'], 
+      },
+    },
+  },
   title: "AmongUs SusList",
   titleTemplate: ":title - SusList",
   description: "一个集合了各大模组反作弊信息的网站,包含黑名单列表、各模组及作弊RPC信息等。",
@@ -88,10 +98,11 @@ export default defineConfig({
     image: {
       lazyLoading: true
     },
-    /* 这是Markdown双向链接配置。
-    语法请见: https://nolebase-integrations.ayaka.io/pages/zh-CN/integrations/markdown-it-bi-directional-links/syntax */
     config: (md) => {
       md.use(BiDirectionalLinks()) 
+      md.use(UnlazyImages(), { 
+        imgElementTag: 'NolebaseUnlazyImg', 
+      }) 
     },
   }
 })
