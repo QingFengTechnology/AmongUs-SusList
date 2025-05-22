@@ -20,7 +20,7 @@ hero:
 features:
   - title: 模组黑名单 
     details: 收集了数个模组的封禁玩家列表,方便玩家查询。<br>也方便了开发者快速同步。
+    link: /BanList
   - title: RPC列表
     details: 提供了外挂程序(与模组)所会发送的RPC,帮助玩家辨别究竟是何程序在作祟。
 ---
-
