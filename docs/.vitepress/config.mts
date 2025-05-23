@@ -71,7 +71,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/QingFengTechnology/AmongUs-SusList' }
     ],
     footer: {
-      message: "使用<a href='https://github.com/QingFengTechnology/AmongUs-SusList/blob/main/LICENSE' target='_blank'>AGPL-3.0</a>协议开源<br>由GitHub Pages提供在线服务",
+      message: "使用<a href='https://github.com/QingFengTechnology/AmongUs-SusList/blob/main/LICENSE' target='_blank'>AGPL-3.0</a>协议开源<br>本站由<a href='https://www.rainyun.com/QingFeng_?s=SusList' target='_blank'>雨云</a>提供在线服务",
       copyright: "© 2023-2025 By <a href='https://qingfengawa.top' target='_blank'>QingFeng</a>"
     },
     editLink: {
